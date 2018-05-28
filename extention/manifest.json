@@ -1,0 +1,14 @@
+{
+    "name": "Workspace Dashboard",
+    "description": "Start page for Google Chrome",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "version": "0.1",
+    "incognito": "split",
+    "icons": {
+        "128": "128.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "manifest_version": 2
+}
