@@ -6,12 +6,20 @@ import React from 'react';
 
 import Time from '../../modules/time';
 import AutoFitImage from '../../modules/autofit';
+import Icon from '../../modules/icon';
+
 import SplitPane from 'react-split-pane';
 
-import img from '../../../images/typic.jpg';
+// import fontawesome from '@fortawesome/fontawesome';
+// import brands from '@fortawesome/fontawesome-free-brands';
+
+import img from '../../../images/land.jpg';
 
 // import img from 'https://source.unsplash.com/1920x1200/?land';
 
+// let q = fontawesome.icon(brands.faVk).html;
+
+debugger;
 
 // Запрет/разрешение ресайза ячеек
 const ALLOW_RESIZE = false;
@@ -20,26 +28,21 @@ const App = () => (
   <main style={ { height: '100vh' } }>
     <AutoFitImage imgSrc={img} className="image-fit" />
 
-    <SplitPane split="horizontal"
-               defaultSize="30%"
-               allowResize={ALLOW_RESIZE}
-               step={50}
-               minSize={200}
-               maxSize={1000}
-               onDragStarted={() => document.body.style.cursor = 'col-resize'}
-               onDragFinished={() => document.body.style.cursor = 'auto'}>
-        <div className="cell-1">
-
+    <div className="content">
+      <div>
+        <div className="test-box">
+          <Icon />
         </div>
-        <SplitPane step={50} allowResize={ALLOW_RESIZE} split="horizontal" defaultSize="58%" minSize={200} maxSize={1000}>
-            <div className="cell-5">
-                <div />
-                    <Time />
-                <div />
-            </div>
-            <div></div>
-        </SplitPane>
-    </SplitPane>
+      </div>
+      <div className="time-wrapper">
+        <Time />
+      </div>
+
+
+      <div />
+    </div>
+
+
 
 
   </main>
