@@ -13,9 +13,9 @@ const App = () => (
 
     <div className="content">
       <div>
-        <div className="test-box">
+        {/* <div className="test-box">
           <Icon />
-        </div>
+        </div> */}
       </div>
       <div className="time-wrapper">
         <Time />
